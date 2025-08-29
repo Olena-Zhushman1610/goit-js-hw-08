@@ -88,4 +88,12 @@ container.addEventListener("click", (event) => {
   if (img.nodeName !== "IMG") {
     return;
   }
+  const largeImageUrl = img.dataset.source;
+
+  console.log(largeImageUrl);
+  const instance = basicLightbox.create(`
+    <img src="${largeImageUrl}" width="1112" height="640">
+`);
+
+  instance.show();
 });
